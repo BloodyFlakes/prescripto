@@ -1,5 +1,5 @@
 function Doctors() {
-  return <div></div>;
+  return <div>Doc</div>;
 }
 
 export default Doctors;
