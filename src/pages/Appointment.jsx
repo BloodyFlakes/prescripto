@@ -69,6 +69,7 @@ function Appointment() {
 
   useEffect(() => {
     fetchDocInfo();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [doctors, docId]);
 
   useEffect(() => {
