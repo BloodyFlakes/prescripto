@@ -10,4 +10,4 @@ Book appointments with trusted doctors in just a few clicks. Whether you need ex
 React using (Vite) \
 Routing: React Router \
 Styling: Tailwind.css \
-UI State management: Context API \
+UI State management: Context API 
