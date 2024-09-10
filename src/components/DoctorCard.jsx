@@ -7,7 +7,10 @@ function DoctorCard({ id, image, name, speciality }) {
   return (
     <div>
       <div
-        onClick={() => navigate(`/appointment/${id}`)}
+        onClick={() => {
+          navigate(`/appointment/${id}`);
+          scrollTo(0, 0);
+        }}
         className="overflow-hidden border border-blue-200 cursor-pointer rounded-xl hover:translate-y-[-10px] transition-all duration-500"
       >
         <img className="bg-blue-50" src={image} alt="doc-image" />
