@@ -67,6 +67,42 @@ function Navbar() {
             Create account
           </button>
         )}
+        <img
+          onClick={() => setShowMenu(true)}
+          className="w-6 md:hidden"
+          src={assets.menu_icon}
+          alt="icon"
+        />
+        {/* ------- Mobile Menu ------- */}
+        <div
+          className={`${
+            showMenu ? "fixed w-full" : "h-0 w-0"
+          } md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}
+        >
+          <div className="flex items-center justify-between px-5 py-6">
+            <img className="w-36" src={assets.logo} alt="Logo" />
+            <img
+              className="w-7"
+              onClick={() => setShowMenu(false)}
+              src={assets.cross_icon}
+              alt="icon"
+            />
+          </div>
+          <ul className="flex flex-col items-center gap-2 px-5 mt-5 text-lg font-medium">
+            <NavLink to="/" onClick={() => setShowMenu(false)}>
+              <p className="inline-block px-4 py-2 rounded">HOME</p>
+            </NavLink>
+            <NavLink to="/doctors" onClick={() => setShowMenu(false)}>
+              <p className="inline-block px-4 py-2 rounded">ALL DOCTORS</p>
+            </NavLink>
+            <NavLink to="/about" onClick={() => setShowMenu(false)}>
+              <p className="inline-block px-4 py-2 rounded">ABOUT</p>
+            </NavLink>
+            <NavLink to="/contact" onClick={() => setShowMenu(false)}>
+              <p className="inline-block px-4 py-2 rounded">CONTACT</p>
+            </NavLink>
+          </ul>
+        </div>
       </div>
     </div>
   );
